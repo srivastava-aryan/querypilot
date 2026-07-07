@@ -25,23 +25,21 @@ const MessageBubble = ({ role, content, sql, data }: Props) => {
           isUser ? "flex-row-reverse" : "flex-row"
         }`}
       >
-        {/* Avatar */}
         <div
-          className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm
-        ${isUser ? "bg-blue-600" : "bg-emerald-600"}`}
+          className={`w-10 h-10 rounded-full flex items-center justify-center font-mono text-xs tracking-[0.22em] border shadow-sm
+        ${isUser ? "bg-orange-500/15 border-orange-400/40 text-orange-100" : "bg-emerald-500/15 border-emerald-400/40 text-emerald-100"}`}
         >
           {isUser ? "U" : "AI"}
         </div>
 
-        {/* Bubble */}
         <div
-          className={`rounded-2xl px-5 py-4 shadow-lg ${
+          className={`rounded-2xl px-5 py-4 shadow-lg transition duration-300 hover:shadow-[0_0_24px_rgba(249,115,22,0.10)] ${
             isUser
-              ? "bg-blue-600 text-white"
-              : "bg-slate-900 border border-slate-700 text-slate-100"
+              ? "border border-orange-400/30 bg-white/[0.04] text-zinc-50"
+              : "border border-zinc-800 bg-[#0f0f0f] text-zinc-100"
           }`}
         >
-          <p className="whitespace-pre-wrap">{content}</p>
+          <p className="whitespace-pre-wrap leading-relaxed text-[0.98rem]">{content}</p>
 
           {sql && (
             <div className="mt-4">

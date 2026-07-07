@@ -39,7 +39,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#0f172a] text-white flex">
+    <div className="min-h-screen bg-[#080808] text-zinc-100 flex">
       <Sidebar
         sessions={sessions}
         currentSession={sessionId}
@@ -47,7 +47,7 @@ const Dashboard = () => {
         onNewChat={handleNewChat}
       />
 
-      <main className="flex-1 p-6">
+      <main className="flex-1 p-6 lg:p-8">
         <ChatBox sessionId={sessionId} />
       </main>
     </div>

@@ -1,1 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
+
+:root {
+	color-scheme: dark;
+	font-family: "Inter", system-ui, sans-serif;
+	background:
+		radial-gradient(circle at top left, rgba(16, 185, 129, 0.12), transparent 28%),
+		radial-gradient(circle at top right, rgba(249, 115, 22, 0.08), transparent 24%),
+		#080808;
+	color: #e5e7eb;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	min-width: 320px;
+	min-height: 100vh;
+	background:
+		radial-gradient(circle at top left, rgba(16, 185, 129, 0.12), transparent 28%),
+		radial-gradient(circle at top right, rgba(249, 115, 22, 0.08), transparent 24%),
+		#080808;
+	color: #e5e7eb;
+	font-family: "Inter", system-ui, sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+::selection {
+	background: rgba(249, 115, 22, 0.35);
+	color: #fff8f0;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: #080808;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #1f2937;
+	border-radius: 999px;
+	border: 2px solid #080808;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #f97316;
+}
